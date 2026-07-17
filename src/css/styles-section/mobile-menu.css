@@ -4,8 +4,8 @@
   inset: 0;
   z-index: 1000;
   width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
+  height: 633px;
+  background-color: var(--bg-dark);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -48,7 +48,7 @@
   margin-left: auto;
   outline: none;
 
-  color: var(--main-color);
+  color: var(--white-color);
   transition: color 300ms ease-in;
 
   svg {
@@ -59,7 +59,7 @@
   &:hover,
   &:focus-visible,
   &:active {
-    color:#FF4F8A;
+    color:var(--red-color);
   }
 }
 
@@ -82,13 +82,14 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  transition: color 0.3s ease;
-  color: var(--main-color);
+  transition: opacity 0.3s ease;
+  color: var(--white-color);
+  opacity: 0.3;
 
   &:hover,
   &:focus-visible,
   &:active {
-    color: var(--accent-color);
+    opacity: 1;
   }
 }
 
