@@ -76,13 +76,13 @@
 .faq_icon {
   width: 32px;
   height: 32px;
-  fill: var(--main-color, #00e5ff);
+  stroke: var(--main-color, #00e5ff);
   flex-shrink: 0;
   transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .faq_item[open] .faq_icon {
-  fill: var(--accent-color);
+  stroke: var(--accent-color);
   transform: rotate(180deg);
 }
 

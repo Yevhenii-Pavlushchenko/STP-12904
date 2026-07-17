@@ -1,11 +1,15 @@
 :root {
-  --font-manrope: "Manrope",sans-serif;
-  --font-space: "Space Grotesk", sans-serif;
+  --font-baloo: "Baloo 2",sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 
-  --background-color: #061b30;
-  --text-color: #eaf2ff;
-  --main-color: #00d4ff;
-  --accent-color: #FF4F8A;
+  --bg-dark: #090432;
+  --bg-light: #242140;
+  --white-color: #fffae6;
+  --title-color: #bebadc;
+  --accent-color: #67628c;
+  --green-color: #86d913;
+  --yellow-color: #ffda00;
+  --red-color: #ce160f;
 
 
   font-synthesis: none;
@@ -29,9 +33,9 @@ body {
   min-height: 100vh;
   margin: 0;
   /* padding-top: 79px; */
-  font-family: var(--font-manrope);
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: var(--font-poppins);
+  background-color: var(--bg-dark);
+  color: var(--white-color);
 }
 body[data-scroll='false'] {
   overflow: hidden;
@@ -58,7 +62,7 @@ h1,
 h2,
 a,
 li {
-  font-family: var(--font-space);
+  font-family: var(--font-baloo);
 }
 
 .visually-hidden {
