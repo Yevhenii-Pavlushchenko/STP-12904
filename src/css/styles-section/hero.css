@@ -74,6 +74,7 @@
 }
 
 .hr_hero-text {
+  font-family: var(--font-baloo);
   font-size: 22px;
   line-height: 1.3;
   font-weight: 700;
@@ -120,7 +121,7 @@
   .hr_hero {
     height: 1147px;
     width: 1440px;
-    align-items: center;
+    /* align-items: center; */
     padding-top: 60px;
     padding-bottom: 60px;
   }
@@ -136,12 +137,17 @@
     height: 1140px;
   }
 
+    .hr_hero-content {
+      padding-top: 24px;
+    }
 
 
   .hr_hero-title {
     font-size: 42px;
     max-width: 800px;
     margin-bottom: 28px;
+    color: var(--bg-light);
+    text-shadow: 2px 4px 1px #dce5d8;
   }
 
   .hr_hero-descr-box {
@@ -151,6 +157,8 @@
   .hr_hero-text {
     font-size: 24px;
     line-height: 1.5;
+    color: var(--bg-light);
+    text-shadow: 2px 4px 1px  #dce5d8;
   }
 
   .hr_hero-btn-img {
