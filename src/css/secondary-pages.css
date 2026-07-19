@@ -1,18 +1,23 @@
-/* Контейнер всей секции */
 .scpg_policy-section {
   padding-top: 40px;
   padding-bottom: 64px;
+
+  @media only screen and (min-width: 1440px) {
+    padding-top: 59px;
+    padding-bottom: 100px;
+  }
 }
 
-/* Ограничение контента по центру */
 .scpg_policy-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  /* Все элементы выравниваются по левому краю */
+
+  @media only screen and (min-width: 1440px) {
+    align-items: center;
+  }
 }
 
-/* Ссылка «Back to Home» */
 .scpg_back-link {
   display: inline-flex;
   align-items: center;
@@ -23,36 +28,50 @@
   opacity: 0.8;
   margin-bottom: 40px;
   transition: opacity 0.3s ease, color 0.3s ease;
-}
 
-.scpg_back-link:hover,
-.scpg_back-link:focus {
-  opacity: 1;
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: var(--accent-color);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    align-self: flex-start;
+  }
 }
 
 .scpg_back-icon {
   stroke: currentColor;
 }
 
-/* Главный заголовок H1 */
 .scpg_main-title {
   font-family: var(--font-baloo);
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.2;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--title-color);
   margin-bottom: 64px;
+
+  @media only screen and (min-width: 1440px) {
+    padding-top: 80px;
+    font-size: 64px;
+    align-self: center;
+    margin-bottom: 80px;
+  }
 }
 
-/* Блок с параграфами */
 .scpg_content-block {
   display: flex;
   flex-direction: column;
   margin-bottom: 24px;
   max-width: 100%;
 
+  @media only screen and (min-width: 1440px) {
+    max-width: 920px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .scpg_content-block p {
@@ -62,7 +81,6 @@
   color: var(--white-color);
 }
 
-/* Подзаголовок Contact Us */
 .scpg_sub-title {
   font-family: var(--font-baloo);
   font-size: 20px;
@@ -74,40 +92,20 @@
   margin-top: 24px;
 }
 
-/* Ссылка на почту внутри текста */
 .scpg_mail-link {
   color: var(--white-color);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
-.scpg_mail-link:hover,
-.scpg_mail-link:focus {
-  color: var(--accent-color);
-}
-
-/* --- Медиа-запрос для Десктопа (1440px+) --- */
-@media only screen and (min-width: 1440px) {
-  .scpg_policy-section {
-    padding-top: 59px;
-    padding-bottom: 100px;
-  }
-
-  /* Центрируем заголовок на десктопе, как на макете */
-  .scpg_main-title {
-    padding-top: 80px;
-    font-size: 64px;
-    align-self: center;
-    margin-bottom: 80px;
-  }
-
-
-  .scpg_content-block {
-    max-width: 920px;
-    margin: 0 auto;
-
-  }
-
-
+.block-info{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
