@@ -1,4 +1,3 @@
-/* Основной контейнер футера */
 .ftr_footer {
   padding: 80px 0;
   border-top: 1px solid var(--accent-color);
@@ -10,21 +9,32 @@
   align-items: center;
   gap: 25px;
   text-align: center;
+
+  @media only screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
 }
 
-/* 1. Кнопка Google Play (вверху на мобилке) */
 .ftr_google-btn {
   display: inline-block;
   padding: 12px 38px;
-    background-color: var(--red-color);
-    border-radius: 12px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    border: 2px solid transparent;
-    box-shadow: 0px 4px 15px rgba(206, 22, 15, 0.4);
-}
+  background-color: var(--red-color);
+  border-radius: 12px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0px 4px 15px rgba(206, 22, 15, 0.4);
 
-.ftr_google-btn:hover {
-  transform: scale(1.03);
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    order: 2;
+    margin-right: auto;
+  }
 }
 
 .ftr_btn-figure {
@@ -37,13 +47,17 @@
   height: auto;
 }
 
-/* 2. Ссылки перехода (посередине на мобилке) */
 .ftr_footer-list {
   order: 2;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
+
+  @media only screen and (min-width: 1440px) {
+    order: 3;
+    gap: 40px;
+  }
 }
 
 .ftr_footer-link {
@@ -53,15 +67,17 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   transition: color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media only screen and (min-width: 1440px) {
+    font-size: 15px;
+  }
 }
 
-.ftr_footer-link:hover,
-.ftr_footer-link:focus {
-
-      color: var(--accent-color);
-}
-
-/* 3. Блок копирайта (в самом низу на мобилке) */
 .ftr_footer-copyright {
   order: 3;
   font-family: var(--font-poppins);
@@ -69,43 +85,11 @@
   color: var(--white-color);
   opacity: 0.8;
   line-height: 1.5;
-}
 
-
-/* --- МЕДИА-ЗАПРОС ДЛЯ ДЕСКТОПА (1440px+) --- */
-@media only screen and (min-width: 1440px) {
-
-  /* Перестраиваем в одну горизонтальную линию */
-  .ftr_footer-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0;
-  }
-
-  /* МЕНЯЕМ ПОРЯДОК ДЛЯ ДЕСКТОПА СЛЕВА НАПРАВО */
-
-  /* 1. Копирайт уходит в левый край */
-  .ftr_footer-copyright {
+  @media only screen and (min-width: 1440px) {
     order: 1;
     text-align: left;
     font-size: 14px;
     margin-right: auto;
-  }
-
-  /* 2. Кнопка Google Play встает по центру */
-  .ftr_google-btn {
-    order: 2;
-    margin-right: auto;
-  }
-
-  /* 3. Ссылки уходят в правый край */
-  .ftr_footer-list {
-    order: 3;
-    gap: 40px;
-  }
-
-  .ftr_footer-link {
-    font-size: 15px;
   }
 }

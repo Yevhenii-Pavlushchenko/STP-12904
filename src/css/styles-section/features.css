@@ -3,7 +3,6 @@
   padding-top: 0;
 }
 
-/* --- ПОДЗАГОЛОВОК --- */
 .fea_subtitle {
   text-align: center;
   font-family: var(--font-baloo);
@@ -22,7 +21,6 @@
   }
 }
 
-/* --- ОБОЛОЧКА СЛАЙДЕРА --- */
 .fea_slider-wrapper {
   margin-left: -23px;
   margin-right: -23px;
@@ -46,7 +44,6 @@
   }
 }
 
-/* Список карточек */
 .fea_cards-list {
   display: flex;
   gap: 16px;
@@ -68,12 +65,10 @@
   align-items: center;
   background-color: var(--bg-light);
   border-radius: 12px;
-  padding:16px;
-  /* Внутренние паддинги 16px по бокам по ТЗ */
+  padding: 16px;
   text-align: center;
 }
 
-/* Спрайтовая иконка */
 .fea_card-icon {
   display: block;
   flex-shrink: 0;
@@ -82,7 +77,6 @@
   margin-bottom: 24px;
 }
 
-/* Заголовок внутри карточки */
 .fea_card-title {
   font-size: 17px;
   font-weight: 400;
@@ -93,7 +87,6 @@
   flex-direction: column;
   align-items: center;
 
-  /* Линия-разделитель */
   &::after {
     content: "";
     display: block;
@@ -105,7 +98,6 @@
   }
 }
 
-/* Описание фичи */
 .fea_card-text {
   padding: 0 2px 2px 12px;
   font-weight: 400;
@@ -114,7 +106,6 @@
   color: var(--title-color);
 }
 
-/* --- ПРОМО КАРТИНКА СНИЗУ --- */
 .fea_promo-picture {
   display: block;
   width: 100%;
