@@ -1,76 +1,115 @@
-
+/* Основной контейнер футера */
 .ftr_footer {
-  background-color: var(--main-color, #00d4ff);
-  padding: 45px 0 ;
-  width: 100%;
+  background-color: var(--bg-dark);
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .ftr_footer-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
 }
 
+/* 1. Кнопка Google Play (вверху на мобилке) */
+.ftr_google-btn {
+  display: inline-block;
+  padding: 12px 38px;
+    background-color: var(--red-color);
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    /* text-decoration: none; */
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 15px rgba(206, 22, 15, 0.4);
+}
+
+.ftr_google-btn:hover {
+  transform: scale(1.03);
+}
+
+.ftr_btn-figure {
+  margin: 0;
+}
+
+.ftr_btn-img {
+  display: block;
+  max-width: 165px;
+  height: auto;
+}
+
+/* 2. Ссылки перехода (посередине на мобилке) */
 .ftr_footer-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  order: 2;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.ftr_footer-item {
-  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .ftr_footer-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.5;
-  text-transform: uppercase;
-  color: var(--background-color);
-  text-decoration: none;
+  font-family: var(--font-poppins);
+  font-size: 14px;
+  color: var(--white-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
   transition: color 0.3s ease;
 }
 
-.ftr_footer-link:hover {
-  color: var(--accent-color);
+.ftr_footer-link:hover,
+.ftr_footer-link:focus {
+  color: var(--yellow-color);
 }
 
-.ftr_footer-copy-main {
-  font-size: 12px;
-  line-height: 1.4;
-  color: var(--background-color);
+/* 3. Блок копирайта (в самом низу на мобилке) */
+.ftr_footer-copyright {
+  order: 3;
+  font-family: var(--font-poppins);
+  font-size: 13px;
+  color: var(--white-color);
+  opacity: 0.8;
+  line-height: 1.5;
 }
 
 
-
+/* --- МЕДИА-ЗАПРОС ДЛЯ ДЕСКТОПА (1440px+) --- */
 @media only screen and (min-width: 1440px) {
   .ftr_footer {
-    padding: 48px 0;
+    padding: 35px 0;
   }
 
+  /* Перестраиваем в одну горизонтальную линию */
   .ftr_footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .ftr_footer-list {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     gap: 0;
   }
 
-  .ftr_footer-link {
-    font-size: 20px;
+  /* МЕНЯЕМ ПОРЯДОК ДЛЯ ДЕСКТОПА СЛЕВА НАПРАВО */
+
+  /* 1. Копирайт уходит в левый край */
+  .ftr_footer-copyright {
+    order: 1;
+    text-align: left;
+    font-size: 14px;
+    margin-right: auto;
   }
 
-  .ftr_footer-copyright {
-    text-align: center;
-    width: 100%;
+  /* 2. Кнопка Google Play встает по центру */
+  .ftr_google-btn {
+    order: 2;
+    margin-right: auto;
+  }
+
+  /* 3. Ссылки уходят в правый край */
+  .ftr_footer-list {
+    order: 3;
+    gap: 40px;
+  }
+
+  .ftr_footer-link {
+    font-size: 15px;
   }
 }
