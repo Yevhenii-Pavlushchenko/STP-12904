@@ -1,8 +1,9 @@
 .hdr_header {
+  background-color: var(--bg-dark);
   position: fixed;
     top: 0;
     left: 0;
-    padding-top: 20px;
+    padding: 6px 0;
     width: 100%;
     margin: 0 auto;
     z-index: 1000;
@@ -24,7 +25,7 @@
   padding: 0;
   cursor: pointer;
 
-  color: var(--main-white);
+  color: var(--white-color);
   transition: color 0.3s ease;
 
   svg {
@@ -41,11 +42,31 @@
   }
 }
 
+.hdr_logo-link{
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.hdr_logo-link picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hdr_logo-img{
+  width: 100%;
+  height: 100%;
+}
+
 .hdr_navigation {
   display: none;
 }
 
 @media only screen and (min-width: 1440px) {
+
+  .hdr_header {
+      padding: 15px 0 ;
+    }
   .hdr_container {
     justify-content: center;
     gap: 400px;
@@ -54,6 +75,10 @@
   .hdr_btn-burger {
     display: none;
   }
+    .hdr_logo-link {
+      width: 32px;
+      height: 32px;
+    }
   .hdr_navigation {
     display: block;
     width: 100%;
@@ -74,19 +99,17 @@
   }
 
   .hdr_item-nav-link {
-    font-family: var(--font-manrope);
     font-size: 16px;
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1.5;
     letter-spacing: 0.05em;
-    color: var(--text-color);
+    color: var(--accent-color);
     transition: color 0.3s ease;
 
     &:hover,
     &:focus-visible,
     &:active {
-      color: var(--accent-color, #00e5ff);
+    color: var(--white-color);
     }
   }
 }

@@ -1,8 +1,7 @@
 /* Основной контейнер футера */
 .ftr_footer {
-  background-color: var(--bg-dark);
-  padding: 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 80px 0;
+  border-top: 1px solid var(--accent-color);
 }
 
 .ftr_footer-wrapper {
@@ -20,7 +19,6 @@
     background-color: var(--red-color);
     border-radius: 12px;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    /* text-decoration: none; */
     border: 2px solid transparent;
     box-shadow: 0px 4px 15px rgba(206, 22, 15, 0.4);
 }
@@ -59,7 +57,8 @@
 
 .ftr_footer-link:hover,
 .ftr_footer-link:focus {
-  color: var(--yellow-color);
+
+      color: var(--accent-color);
 }
 
 /* 3. Блок копирайта (в самом низу на мобилке) */
@@ -75,9 +74,6 @@
 
 /* --- МЕДИА-ЗАПРОС ДЛЯ ДЕСКТОПА (1440px+) --- */
 @media only screen and (min-width: 1440px) {
-  .ftr_footer {
-    padding: 35px 0;
-  }
 
   /* Перестраиваем в одну горизонтальную линию */
   .ftr_footer-wrapper {

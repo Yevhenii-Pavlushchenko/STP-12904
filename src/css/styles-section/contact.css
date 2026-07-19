@@ -5,6 +5,7 @@
   align-items: center;
   background-color: var(--bg-dark);
   padding-bottom: 0;
+  padding-top: 0;
 }
 
 
@@ -85,15 +86,15 @@
 /* --- Медиа-запросы для Десктопа (1440px+) --- */
 @media only screen and (min-width: 1440px) {
   .cnt_content {
-    padding-top: 60px;
-    padding-bottom: 45px;
+    padding-top: 80px;
+    padding-bottom: 56px;
   }
 
   .cnt_title {
     font-size: 32px;
     max-width: 900px;
-    margin-bottom: 35px;
-    letter-spacing: 0.05em;
+    margin-bottom: 56px;
+    line-height: 1.5;
   }
 
   .cnt_link {
